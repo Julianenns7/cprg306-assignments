@@ -55,7 +55,7 @@ export default function ItemList({ items, onItemSelect }){
                 
                 >Sort by category
                 </button>
-            </div>
+                </div>
             {sortedItems.map((item) => (
                 <Item
                 key={item.id}
