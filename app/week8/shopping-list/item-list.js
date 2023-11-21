@@ -5,7 +5,7 @@ import Item from "./item";
 
 
 
-export default function ItemList({ items }){
+export default function ItemList({ items, onItemSelect }){
 
     
     
@@ -55,13 +55,14 @@ export default function ItemList({ items }){
                 
                 >Sort by category
                 </button>
-            </div>
+                </div>
             {sortedItems.map((item) => (
                 <Item
                 key={item.id}
                 name={item.name}
                 quantity={item.quantity}
                 category={item.category}
+                onSelect={() => onItemSelect(item.name)}
                 />
 
             
